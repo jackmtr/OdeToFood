@@ -11,6 +11,9 @@ namespace OdeToFood
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/Scripts/jquery-ui-{version}.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -26,6 +29,20 @@ namespace OdeToFood
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
+                      "~/Content/themes/base/jquery.core.css",
+                      "~/Content/themes/base/jquery.resizable.css",
+                      "~/Content/themes/base/jquery.selectable.css",
+                      "~/Content/themes/base/jquery.accordion.css",
+                      "~/Content/themes/base/jquery.autocomplete.css",
+                      "~/Content/themes/base/jquery.button.css",
+                      "~/Content/themes/base/jquery.dialog.css",
+                      "~/Content/themes/base/jquery.slider.css",
+                      "~/Content/themes/base/jquery.tabs.css",
+                      "~/Content/themes/base/jquery.datepicker.css",
+                      "~/Content/themes/base/jquery.progressbar.css", 
+                      "~/Content/themes/base/jquery.theme.css"));
         }
     }
 }
