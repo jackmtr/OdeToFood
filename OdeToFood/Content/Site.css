@@ -5,6 +5,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    padding-top: 100px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -37,4 +38,10 @@ textarea {
 
 .review p {
     font-size: 0.8em;
+}
+
+.ui-widget-content {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
