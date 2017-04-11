@@ -33,7 +33,9 @@
     </div>
     <div class="container body-content">
         @RenderSection("featured", required: false)
-        @RenderBody()
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
         <hr />
 
         @*<div>

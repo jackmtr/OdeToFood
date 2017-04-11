@@ -39,7 +39,26 @@
         $input.autocomplete(options);
     };
 
+    var getPage = function () {
+
+        var $a = $(this); //this is the anchor
+
+        var options = {
+            url: $a.attr("href"),
+            data: $("form").serialize(),
+            type: "get"
+        };
+
+        $.ajax(options).done(function (data) {
+            var target = $a.parents("div.pagedList").attr("data-otf-target");
+            $(target).replaceWith(data);
+        });
+        return false;
+    };
+
     $("form[data-otf-ajax='true']").submit(ajaxFormSubmit);
 
     $("input[data-otf-autocomplete]").each(createAutocomplete);
+
+    $(".main-content").on("click", ".pagedList a", getPage);
 });
